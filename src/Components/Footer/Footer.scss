@@ -1,0 +1,17 @@
+@import "../../assets/palette";
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $DARK_GRAY;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+
+  h6 {
+    color: white;
+    font-weight: 400;
+  }
+}

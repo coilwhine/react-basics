@@ -1,0 +1,41 @@
+.Navigator {
+  position: sticky;
+  top: 75px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  flex-shrink: 0;
+
+  a.active {
+    background-color: #1fa9b3;
+
+    &:hover {
+      background-color: #128e97;
+    }
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 7px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #1157a15d;
+    background-color: #2789f2;
+
+    &:hover {
+      background-color: #1e76d3;
+    }
+
+    &:active {
+      background-color: #1860ae;
+    }
+  }
+}
