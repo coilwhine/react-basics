@@ -1,24 +1,24 @@
 .EmployeeExtend {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .all-wraper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
+    border: solid 2px #2689f2;
+    padding: 20px 40px;
+    border-radius: 10px;
 
-    .all-wraper {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        border: solid 2px #2689F2;
-        padding: 20px 40px;
-        border-radius: 10px;
-
-        a {
-            background-color: rgb(156, 44, 44);
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            width: 80px;
-            text-align: center;
-        }
+    a {
+      background-color: rgb(156, 44, 44);
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      width: 80px;
+      text-align: center;
     }
+  }
 }
