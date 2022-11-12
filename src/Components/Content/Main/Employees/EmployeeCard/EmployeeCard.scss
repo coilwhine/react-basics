@@ -1,0 +1,19 @@
+.EmployeeCard {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    width: 320px;
+
+    img {
+        width: 50px;
+        border-radius: 10px;
+        transition: 200ms ease-out;
+
+        &:hover {
+            box-shadow: 0 0 4px 2px rgb(31, 169, 179);
+        }
+    }
+}
