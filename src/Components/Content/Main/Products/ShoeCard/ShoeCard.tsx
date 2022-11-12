@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
-import { productModel } from "../../../../../Models/ProductModel";
-import productsServices from "../../../../../Services/ProductsServices";
+import { ProductModel } from "../../../../../Models/ProductModel";
 import "./ShoeCard.scss";
 
-function ShoeCard({ product }: { product: productModel }): JSX.Element {
+function ShoeCard({ product }: { product: ProductModel }): JSX.Element {
 
     const imgSrc = 'http://localhost:3030/api/products/images/'
 

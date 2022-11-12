@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { employeeModel } from "../../../../Models/EmployeeModel";
+import { EmployeeModel } from "../../../../Models/EmployeeModel";
 import employeesServices from "../../../../Services/EmployeesServices";
 import EmployeeCard from "./EmployeeCard/EmployeeCard";
 import "./Employees.scss";
 
 function Employees(): JSX.Element {
 
-    const [employee, setEmployee] = useState<employeeModel[] | null>(null)
+    const [employee, setEmployee] = useState<EmployeeModel[] | null>(null)
 
     useEffect(() => {
         employeesServices.getAllEmployees().then(

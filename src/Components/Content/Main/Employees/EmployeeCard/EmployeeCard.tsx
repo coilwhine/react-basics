@@ -1,9 +1,9 @@
 
 import { Link } from "react-router-dom";
-import { employeeModel } from "../../../../../Models/EmployeeModel";
+import { EmployeeModel } from "../../../../../Models/EmployeeModel";
 import "./EmployeeCard.scss";
 
-function EmployeeCard({ employee }: { employee: employeeModel }): JSX.Element {
+function EmployeeCard({ employee }: { employee: EmployeeModel }): JSX.Element {
 
     const employeeImg = 'http://localhost:3030/api/employees/images/'
 

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { productModel } from "../../../../Models/ProductModel";
+import { ProductModel } from "../../../../Models/ProductModel";
 import productsServices from "../../../../Services/ProductsServices";
 import "./Products.scss";
 import ShoeCard from "./ShoeCard/ShoeCard";
 
 function Products(): JSX.Element {
 
-    const [products, setProducts] = useState<productModel[] | null>(null);
+    const [products, setProducts] = useState<ProductModel[] | null>(null);
     useEffect(() => {
         productsServices.getAllProducts()
             .then((data) => {
