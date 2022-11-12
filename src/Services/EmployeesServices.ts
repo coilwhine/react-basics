@@ -1,18 +1,18 @@
-import { employeeModel } from "../Models/EmployeeModel";
+import { EmployeeModel } from "../Models/EmployeeModel";
 
 class EmployeesServices {
   async getAllEmployees() {
-    const employees = await fetch("http://localhost:3030/api/employees", {
+    const response = await fetch("http://localhost:3030/api/employees", {
       method: "GET",
-    }).then((response) => response.json());
-    return employees;
+    });
+    return response.json();
   }
 
-  async getSpecificEmployees(id: string | undefined): Promise<employeeModel> {
-    const employee = await fetch(`http://localhost:3030/api/employees/${id}`, {
+  async getSpecificEmployees(id: string | undefined): Promise<EmployeeModel> {
+    const response = await fetch(`http://localhost:3030/api/employees/${id}`, {
       method: "GET",
-    }).then((response) => response.json());
-    return employee;
+    });
+    return response.json();
   }
 }
 

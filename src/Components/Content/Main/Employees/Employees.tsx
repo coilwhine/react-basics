@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { employeeModel } from "../../../../Models/EmployeeModel";
+import { EmployeeModel } from "../../../../Models/EmployeeModel";
 import employeesServices from "../../../../Services/EmployeesServices";
 import EmployeeCard from "./EmployeeCard/EmployeeCard";
 import "./Employees.scss";
 
 function Employees(): JSX.Element {
-  const [employee, setEmployee] = useState<employeeModel[] | null>(null);
+  const [employee, setEmployee] = useState<EmployeeModel[]>([]);
 
   useEffect(() => {
     employeesServices.getAllEmployees().then((res) => setEmployee(res));
@@ -13,9 +13,7 @@ function Employees(): JSX.Element {
 
   return (
     <div className="Employees">
-      {employee?.map((emp) => {
-        return <EmployeeCard key={emp.id} employee={emp} />;
-      })}
+      {employee.map((emp) => <EmployeeCard key={emp.id} employee={emp} />)}
     </div>
   );
 }

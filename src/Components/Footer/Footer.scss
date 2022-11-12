@@ -1,8 +1,10 @@
+@import "../../assets/palette";
+
 .Footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(33, 33, 33);
+  background-color: $DARK_GRAY;
   position: fixed;
   bottom: 0;
   width: 100%;

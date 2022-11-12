@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import EmployeeExtend from "./Employees/EmployeeCard/EmployeeExtend/EmployeeExtend";
 import Employees from "./Employees/Employees";
 import Home from "./Home/Home";

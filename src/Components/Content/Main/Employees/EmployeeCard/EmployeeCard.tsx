@@ -1,23 +1,35 @@
 import { Link } from "react-router-dom";
-import { employeeModel } from "../../../../../Models/EmployeeModel";
+import { EmployeeModel } from "../../../../../Models/EmployeeModel";
 import "./EmployeeCard.scss";
+import { useMemo } from "react";
 
-function EmployeeCard({ employee }: { employee: employeeModel }): JSX.Element {
-  const employeeImg = "http://localhost:3030/api/employees/images/";
+interface Props {
+  employee: EmployeeModel;
+}
 
-  function getAge(date: string) {
-    const today = new Date();
-    const birthDate = new Date(date);
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-    if (age > 70) {
-      return "Old";
-    }
-    return age;
+function getAge(date: string) {
+  const today = new Date();
+  const birthDate = new Date(date);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
   }
+  if (age > 70) {
+    return "Old";
+  }
+  return age;
+}
+
+const employeeImg = "http://localhost:3030/api/employees/images/";
+
+function EmployeeCard(props: Props): JSX.Element {
+  const { employee } = props;
+
+  const employeeAge = useMemo(
+    () => getAge(employee.birthDate),
+    [employee.birthDate]
+  );
 
   return (
     <div className="EmployeeCard">
@@ -30,7 +42,7 @@ function EmployeeCard({ employee }: { employee: employeeModel }): JSX.Element {
         <span>{employee.city}</span>
         <div>
           <span>Age: </span>
-          <strong>{getAge(employee.birthDate)}</strong>
+          <strong>{employeeAge}</strong>
         </div>
       </div>
       <Link to={`/employees/${employee.id}`}>

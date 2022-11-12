@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { employeeModel } from "../../../../../../Models/EmployeeModel";
+import { EmployeeModel } from "../../../../../../Models/EmployeeModel";
 import employeesServices from "../../../../../../Services/EmployeesServices";
 import "./EmployeeExtend.scss";
 
 function EmployeeExtend(): JSX.Element {
   const { employeeId } = useParams();
-  const [employee, setEmploee] = useState<employeeModel | null>(null);
+  const [employee, setEmployee] = useState<EmployeeModel | null>(null);
 
   useEffect(() => {
     employeesServices
       .getSpecificEmployees(employeeId)
-      .then((res) => setEmploee(res));
-  }, []);
+      .then((res) => setEmployee(res));
+  }, [employeeId, setEmployee]);
 
   return (
     <div className="EmployeeExtend">
