@@ -6,7 +6,7 @@ import ShoeCard from "./ShoeCard/ShoeCard";
 
 function Products(): JSX.Element {
 
-  const [products, setProducts] = useState<ProductModel[] | null>(null);
+  const [products, setProducts] = useState<ProductModel[]>([]);
   useEffect(() => {
     productsServices.getAllProducts()
       .then((data) => {
@@ -16,7 +16,7 @@ function Products(): JSX.Element {
 
   return (
     <div className="Products">
-      {products?.map((product) => {
+      {products.map((product) => {
         return <ShoeCard key={product.id} product={product} />
       })}
     </div>
