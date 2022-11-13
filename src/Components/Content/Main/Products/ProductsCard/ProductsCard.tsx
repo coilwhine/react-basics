@@ -1,10 +1,10 @@
 import { ProductModel } from "../../../../../Models/ProductModel";
-import "./ShoeCard.scss";
+import "./ProductsCard.scss";
 
 function ShoeCard({ product }: { product: ProductModel }): JSX.Element {
 
   return (
-    <div className="ShoeCard">
+    <div className="ProductsCard">
       <h3>{product.name}</h3>
       <div className="all-wraper">
         <div>

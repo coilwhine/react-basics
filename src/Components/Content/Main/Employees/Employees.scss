@@ -1,8 +1,16 @@
 .Employees {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  width: 100%;
+  gap: 20px;
+
+  .all-employees-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
 }

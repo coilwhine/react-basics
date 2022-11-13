@@ -29,7 +29,7 @@ function EmployeeCard({ employee }: { employee: EmployeeModel }): JSX.Element {
         <span>{employee.city}</span>
         <div>
           <span>Age: </span>
-          <strong>{getAge(employee.birthDate)}</strong>
+          <strong>{employee.birthDate ? getAge(employee.birthDate) : 'none'}</strong>
         </div>
       </div>
       <Link to={`/employees/${employee.id}`}>

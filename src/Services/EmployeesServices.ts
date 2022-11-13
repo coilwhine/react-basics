@@ -12,6 +12,16 @@ class EmployeesServices {
     const result = await fetch(`http://localhost:3030/api/employees/${id}`)
     return result.json();
   }
+
+  async setNewEmployee(employee: EmployeeModel) {
+    await fetch("http://localhost:3030/api/employees", {
+      method: "POST",
+      body: JSON.stringify(employee),
+      headers: {
+        "Content-Type": "aplication-json"
+      }
+    })
+  }
 }
 
 const employeesServices = new EmployeesServices();

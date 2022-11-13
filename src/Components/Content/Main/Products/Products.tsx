@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ProductModel } from "../../../../Models/ProductModel";
 import productsServices from "../../../../Services/ProductsServices";
 import "./Products.scss";
-import ShoeCard from "./ShoeCard/ShoeCard";
+import ProductsCard from "./ProductsCard/ProductsCard";
 
 function Products(): JSX.Element {
 
@@ -17,7 +17,7 @@ function Products(): JSX.Element {
   return (
     <div className="Products">
       {products.map((product) => {
-        return <ShoeCard key={product.id} product={product} />
+        return <ProductsCard key={product.id} product={product} />
       })}
     </div>
   );

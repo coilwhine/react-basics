@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { EmployeeModel } from "../../../../../../Models/EmployeeModel";
 import employeesServices from "../../../../../../Services/EmployeesServices";
-import "./EmployeeExtend.scss";
+import "./EmployeeInfo.scss";
 
-function EmployeeExtend(): JSX.Element {
+function EmployeeInfo(): JSX.Element {
 
   const { employeeId } = useParams()
   const [employee, setEmploee] = useState<EmployeeModel | null>(null)
@@ -14,7 +14,7 @@ function EmployeeExtend(): JSX.Element {
   }, [employeeId])
 
   return (
-    <div className="EmployeeExtend">
+    <div className="EmployeeInfo">
       <h1>Employee Number: {employeeId}</h1>
       <div className="all-wraper">
         <p><label>Name: </label>{employee?.firstName} {employee?.lastName}</p>
@@ -26,4 +26,4 @@ function EmployeeExtend(): JSX.Element {
   );
 }
 
-export default EmployeeExtend;
+export default EmployeeInfo;

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import EmployeeExtend from "./Employees/EmployeeCard/EmployeeExtend/EmployeeExtend";
+import EmployeeExtend from "./Employees/EmployeeCard/EmployeeInfo/EmployeeInfo";
 import Employees from "./Employees/Employees";
 import Home from "./Home/Home";
 import "./Main.scss";
