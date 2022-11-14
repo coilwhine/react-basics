@@ -18,7 +18,7 @@ class EmployeesServices {
       method: "POST",
       body: JSON.stringify(employee),
       headers: {
-        "Content-Type": "aplication-json"
+        'Content-Type': 'application/json'
       }
     })
   }

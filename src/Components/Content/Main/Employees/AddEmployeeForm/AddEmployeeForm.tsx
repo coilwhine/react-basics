@@ -8,9 +8,9 @@ function AddEmployeeForm() {
     const { register, handleSubmit, reset } = useForm<EmployeeModel>()
 
     function submitEmployeeForm(employee: EmployeeModel) {
-        employeesServices.setNewEmployee(employee).then(() => {
-            // reset()
-        })
+        console.log(employee);
+
+        employeesServices.setNewEmployee(employee)
     }
 
     return (
